@@ -1,26 +1,8 @@
 ---
-const navItems = [
-  {
-    title: "Experiencia",
-    label: "experiencia",
-    url: "/#experiencia",
-  },
-  {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
-  },
-  {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
-  },
-  {
-    title: "Contacto",
-    label: "contacto",
-    url: "/#contacto",
-  },
-];
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <header
@@ -35,13 +17,13 @@ const navItems = [
     `}
   >
     {
-      navItems.map((link) => (
+      i18n.NAV_ITEMS.map((link) => (
         <a
           class="hover:bg-white/10 p-1 rounded-full px-2 sm:px-3 transition ease-in text-sm sm:text-base capitalize"
-          aria-label={link.label}
-          href={link.url}
+          aria-label={link.LABEL}
+          href={link.URL}
         >
-          {link.title}
+          {link.TITLE}
         </a>
       ))
     }

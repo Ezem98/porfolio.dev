@@ -1,27 +1,16 @@
 ---
+import { getI18N } from "@/i18n";
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCIE = [
-  {
-    date: "Actualmente...",
-    title: "Ssr Fullstack Developer − Oversoft",
-    description:
-      "A cargo del desarrollo de componentes y diseños; responsable de la puesta en marcha del sitio web, como también el mantenimiento y optimización del mismo. Además coloboro como desarrollador del lado del procesamiento y esqumatización de los datos que recibe el sitio.",
-    link: "https://www.oversoft.net/",
-  },
-  {
-    date: "Febrero 2023",
-    title: "React JS Ssr Developer  − Incluit",
-    description:
-      "Responsable del mantenimiento del código, la creación de componentes, hooks y utilidades para el desarrollo de un sistema digital de procesamiento judicial para la corte de Texas, Estados Unidos. ",
-  },
-];
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <ol class="relative border-s border-gray-200 ml-3">
   {
-    EXPERIENCIE.map((experiencie) => (
+    i18n.EXPERIENCE_ITEMS.map((experience) => (
       <li class="mb-10 ms-4">
-        <ExperienceItem {...experiencie} />
+        <ExperienceItem {...experience} />
       </li>
     ))
   }

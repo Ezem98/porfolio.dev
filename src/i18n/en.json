@@ -1,0 +1,94 @@
+{
+  "NAV_ITEMS": [
+    {
+      "TITLE": "Experience",
+      "LABEL": "experience",
+      "URL": "/#experience"
+    },
+    {
+      "TITLE": "Projects",
+      "LABEL": "projects",
+      "URL": "/#projects"
+    },
+    {
+      "TITLE": "About me",
+      "LABEL": "about-me",
+      "URL": "/#about-me"
+    },
+    {
+      "TITLE": "Contact me",
+      "LABEL": "contact-me",
+      "URL": "/#contact-me"
+    }
+  ],
+  "SECTIONS_ID": {
+    "CONTACT_ID": "contact-me",
+    "EXPERIENCE_ID": "experience",
+    "PROJECTS_ID": "projects",
+    "ABOUT_ME_ID": "about-me"
+  },
+  "SEO_TITLE": "Ezequiel's Portfolio - Web and Mobile Developer with 5 Years of Experience",
+  "SEO_DESCRIPTION": "Hire Ezequiel to build your web or mobile application. Web Developer. Master in creating amazing applications.",
+  "INTRO_TITLE": "Hey, I'm Ezequiel",
+  "BADGE": "Open to Proposals",
+  "INTRO_SUBTITLE_1": "+5 years of experience.",
+  "INTRO_SUBTITLE_2": "Web and Mobile Developer",
+  "INTRO_SUBTITLE_3": "From Buenos Aires, Argentina",
+  "INTRO_SUBTITLE_4": "Master in creating amazing applications.",
+  "EXPERIENCE_TITLE": "Work Experience",
+  "EXPERIENCE_ITEMS": [
+    {
+      "DATE": "Now...",
+      "TITLE": "Ssr Fullstack Developer − Oversoft",
+      "DESCRIPTION": "Responsible for developing components and designs; in charge of launching the website, as well as maintaining and optimizing it. Also, involved as a developer in data processing and schemaization on the site.",
+      "LINK": "https://www.oversoft.net/"
+    },
+    {
+      "DATE": "February 2023",
+      "TITLE": "React JS Ssr Developer  − Incluit",
+      "DESCRIPTION": "Responsible for code maintenance, creation of components, hooks, and utilities for the development of a digital judicial processing system for the Texas Supreme Court, United States."
+    }
+  ],
+  "EXPERIENCE_KNOW_MORE": "Learn more...",
+  "PROJECTS_TITLE": "Projects",
+  "PROJECTS_ITEMS": [
+    {
+      "ID": 0,
+      "TITLE": "IAnime - Anime series recommendation website based on your preferences, enriched with artificial intelligence.",
+      "DESCRIPTION": "Website powered by AI that allows up to 5 choices of your favorite anime, which it uses as a reference to provide you with the best recommendations for new series. Created from scratch with Next.js, React, and Tailwind CSS.",
+      "LINK": "https://datalab-oso5.vercel.app/",
+      "GITHUB": "https://github.com/Ezem98/datalab",
+      "IMAGE": "/projects/ianime.webp"
+    },
+    {
+      "ID": 1,
+      "TITLE": "Datalab - Excellent tool for player scouting in Argentina.",
+      "DESCRIPTION": "Web application that allows searching for players; enables the comparison of players, accepting a maximum of 5 at a time; making new discoveries in the market; customizing the used database, and many more utilities.",
+      "LINK": "https://datalab-oso5.vercel.app/",
+      "GITHUB": "https://github.com/Ezem98/datalab",
+      "IMAGE": "/projects/datalab.webp"
+    },
+    {
+      "ID": 2,
+      "TITLE": "AintFungi - A fashion trend from the future.",
+      "DESCRIPTION": "Web application for an e-commerce clothing brand born from the idea of the uniqueness and distinction of each person.",
+      "LINK": "https://aintfungi-frontend.vercel.app/",
+      "GITHUB": "https://github.com/Ezem98/aintfungi-frontend",
+      "IMAGE": "/projects/aintfungi.webp"
+    },
+    {
+      "ID": 3,
+      "TITLE": "EDM - Elevaplus Data Management.",
+      "DESCRIPTION": "Daily and constant use application for managing various aspects of a transportation company. From service loading, employee and client management, to graphics that help visualize daily, monthly, and yearly performance, as well as comparing between different time periods.",
+      "LINK": "#",
+      "GITHUB": "https://github.com/Ezem98/elevaplus-data",
+      "IMAGE": "/projects/elevaplus.webp"
+    }
+  ],
+  "PROJECTS_FOOTER_LINK_1": "View Source Code",
+  "PROJECTS_FOOTER_LINK_2": "Visit the Website",
+  "ABOUT_ME_TITLE": "About Me",
+  "ABOUT_ME_P1": "My name is Ezequiel, but my family and friends call me Eze. I started programming with a Java pseudocode at around 18 when I began university. Currently, I'm <strong>developing all sorts of incredible applications</strong>.",
+  "ABOUT_ME_P2": "Some of my successes include <strong>collaborating with the Texas court for the development of the first web application for the management of a fully digital supreme court</strong>. Although I'm now distant from that project, it was very exciting to participate and contribute my knowledge and skills.",
+  "ABOUT_ME_P3": "As a developer, my goal is to improve both personally and professionally by being part of different projects, acquiring new technical and everyday skills. My philosophy is that <strong>knowledge has no limits, especially in the world of development, so I'm interested in hearing opinions and getting involved in diverse and varied projects</strong>. If you have an innovative project in mind, feel free to contact me."
+}

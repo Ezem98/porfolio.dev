@@ -1,37 +1,21 @@
 ---
+import { getI18N } from "@/i18n";
+
 export const personalImageAlt = "Miguel Ángel picture";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <article class="flex flex-col md:flex-row gap-8 justify-center items-center">
   <div
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-400 [&>p>strong]:font-semibold text-pretty order-2 md:order-1"
   >
-    <p>
-      Me llamo Ezequiel pero mi familia y amigos me llaman Eze. Empecé en la
-      programación con un pseudocodigo de java, más o menos con 18 años al
-      empezar la universidad. Actualmente estoy <strong
-        >desarrollando todo tipo de aplicaciones increíbles</strong
-      >.
-    </p>
+    <p set:html={i18n.ABOUT_ME_P1} />
 
-    <p>
-      Algunos de mis éxitos incluyen <strong
-        >colaborar con el juzgado de Texas para el desarrollo de la primer
-        aplicación web para el manejo de una corte suprema totalmente digital</strong
-      >. Aunque hoy estoy alejado de ese proyecto, fue muy emocionante poder
-      participar y contribuir con mis conocimientos y habilidades.
-    </p>
+    <p set:html={i18n.ABOUT_ME_P2} />
 
-    <p>
-      Como desarrollador, mi objetivo es mejorar tanto en lo personal como en lo
-      profesional, formando parte de distintos proyectos, adquiriendo nuevos
-      conocimientos y habilidades tanto técnicas como del día a día. Mi
-      filosofía es que <strong
-        >el saber no ocupa lugar, y menos en el mundo del desarrollo, por eso me
-        interesa escuchar opiniones e interiorizarme en proyectos diversos y
-        variados</strong
-      >. Si tenés algún proyecto innovador en mente, no dudes en contactarme.
-    </p>
+    <p set:html={i18n.ABOUT_ME_P3} />
   </div>
   <img
     src="/me.webp"
@@ -41,47 +25,3 @@ export const personalImageAlt = "Miguel Ángel picture";
     height="12"
   />
 </article>
-
-<!-- FRASES PROHIBIDAS EN VUESTRO PORTFOLIO
-
-<p>
-  Mi sueño es encontrar mi primer empleo en el mundo de la programación. Una empresa donde pueda seguir aprendiendo. ❌
-</p>
-
-<p>
-  ❌ Apasionado de la programación desde chekitito. Me encantan los ordenadores y crear páginas web buenas y rápidas con la última tecnología.
-</p>
-
-<p>
-  Trabajo bien en equipo. Siempre estoy aprendiendo cosas nuevas.
-</p>
-
--------------------------------------
-
---------------------------------------
-
-<p>
-  ¡Soy Leo! Estudié Derecho Empresarial y, tras años ejerciendo, me pasé al mundo de la Programación. Desde entonces disfruto creando experiencias web para los usuarios.
-</p>
-
-<p>
-  Entre mis éxitos destaco que durante el Grado Superior, ayudé a mis compañeros a aprender sobre TDD. Me encanta el testing, creo en su importancia, y me gusta compartir mi conocimiento sobre ello.
-</p>
-
-<p>
-  Cuento con experiencia desarrollando aplicaciones móviles, y he creado una iniciativa llamada X para mezclar mis dos pasiones: la programación y el derecho. Ayudando a la sociedad a acceso a una defensa justa.
-</p>
-
----------------------------------------
-
-<p>Me llamo Sara, tengo 25 años y soy de Santiago, Chile 🇨🇱. Terminé mis estudios como Desarrolladora Web. Me encanta enfocarme en la parte del rendimiento, para ofrecer la mejora experiencia al usuario.</p>
-
-<p>
-  Colaboro en la organización del MeetUp local BeerJS donde reunimos a desarrolladores de Santiago para compartir conocimiento y experiencias. El año 2023 hicimos un total de 25 charlas con más de 2000 asistentes.
-</p>
-
-<p>
-  Además de participar activamente en la comunidad, he participado en la Hackathon de Midudev quedando en 3er puesto con mi proyecto _Chatty_, donde usando IA podías interactuar con un PDF. ¡Échale un vistazo!
-</p>
-
--->

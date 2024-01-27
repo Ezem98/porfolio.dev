@@ -1,14 +1,18 @@
 ---
-import LinkButton from "./LinkButton.astro"
+import { getI18N } from "@/i18n";
+import LinkButton from "./LinkButton.astro";
 
 interface Props {
-  title: string
-  description: string
-  link?: string
-  date: string
+  TITLE: string;
+  DESCRIPTION: string;
+  LINK?: string;
+  DATE: string;
 }
 
-const { title, description, link, date } = Astro.props
+const { DATE, TITLE, DESCRIPTION, LINK } = Astro.props;
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div
@@ -17,18 +21,18 @@ const { title, description, link, date } = Astro.props
 </div>
 <time
   class="mb-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80"
-  >{date}</time
+  >{DATE}</time
 >
 <h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mt-2">
-  {title}
+  {TITLE}
 </h3>
 <p class="mb-4 text-base font-normal dark:text-gray-200 text-pretty">
-  {description}
+  {DESCRIPTION}
 </p>
 {
-  link && (
-    <LinkButton href={link}>
-      Saber más...{" "}
+  LINK && (
+    <LinkButton href={LINK}>
+      {i18n.EXPERIENCE_KNOW_MORE}{" "}
       <svg
         class="w-3 h-3 ms-2 rtl:rotate-180"
         aria-hidden="true"
