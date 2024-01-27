@@ -1,10 +1,20 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import LinkButton from "./LinkButton.astro"
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import LinkButton from "./LinkButton.astro";
 
-const TAGS = {
+interface ITag {
+  name: string;
+  class: string;
+  icon?: any;
+}
+
+interface ITags {
+  [key: string]: ITag;
+}
+
+const TAGS: ITags = {
   NEXT: {
     name: "Next.js",
     class: "bg-black text-white",
@@ -15,26 +25,46 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
-}
+  DEPRECATED: {
+    name: "Deprecated",
+    class: "bg-[#606060] text-white",
+  },
+  IN_PROGRESS: {
+    name: "In Progress",
+    class: "bg-[#27ae60] text-white",
+  },
+};
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title:
+      "IAnime - Sitio web que de recomendación de animes en base a tus gustos, y enriquecido con IA.",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Sitio web impulsado con IA que admite hasta 5 elecciones de tus animes favoritos, los cuales usará como referencia para brindarte las mejores recomendaciones de nuevas series. Creado desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://datalab-oso5.vercel.app/",
+    github: "https://github.com/Ezem98/datalab",
+    image: "/projects/ianime.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.IN_PROGRESS],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title:
+      "Datalab - Excelente herramienta para el scouting de jugadores en Argentina.",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Aplicación web que permite buscar jugadores; compararlos hasta contra otros 5; hacer nuevos descubrimientos en el mercado; personalizar la base de datos que se utiliza; y muchas más utilidades. Creado desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://datalab-oso5.vercel.app/",
+    github: "https://github.com/Ezem98/datalab",
+    image: "/projects/datalab.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.DEPRECATED],
   },
-]
+  {
+    title: "EDM - Elevaplus Data Management. ",
+    description:
+      "Aplicación de uso diario y constante, para el manejo de diversos aspectos de una empresa dedicada al transporte. Desde la carga de servicios, el manejo de empleados, clientes, hasta gráficos que ayudan a visualizar el rendimiento diario, mensual y anual, asi como también comparar entre distintos periodos de tiempo. Creado desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://adventjs.dev",
+    github: "https://github.com/Ezem98/elevaplus-frontend",
+    image: "/projects/elevaplus.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.DEPRECATED],
+  },
+];
 ---
 
 <div class="flex flex-col gap-y-16">
@@ -51,7 +81,7 @@ const PROJECTS = [
               <span
                 class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
               >
-                <tag.icon class="size-4" />
+                {tag.icon && <tag.icon class="size-4" />}
                 {tag.name}
               </span>
             </li>
