@@ -1,7 +1,11 @@
 ---
 import GitHub from "./icons/GitHub.astro";
 import NextJS from "./icons/NextJS.astro";
+import ReactJS from "./icons/ReactJS.astro";
+import Javascript from "./icons/Javascript.astro";
+import Typescript from "./icons/Typescript.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import StyledComponents from "./icons/StyledComponents.astro";
 import LinkButton from "./LinkButton.astro";
 
 interface ITag {
@@ -20,49 +24,83 @@ const TAGS: ITags = {
     class: "bg-black text-white",
     icon: NextJS,
   },
+  REACT: {
+    name: "React.js",
+    class: "bg-[#087EA4] text-white",
+    icon: ReactJS,
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    class: "bg-[#f0db4f] text-white",
+    icon: Javascript,
+  },
+  TYPESCRIPT: {
+    name: "Typescript",
+    class: "bg-[#3178C6] text-white",
+    icon: Typescript,
+  },
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  STYLED_COMPONENTS: {
+    name: "Styled Components",
+    class: "bg-[#713459] text-white",
+    icon: StyledComponents,
+  },
   DEPRECATED: {
-    name: "Deprecated",
+    name: "Deprecado",
     class: "bg-[#606060] text-white",
   },
   IN_PROGRESS: {
-    name: "In Progress",
+    name: "En progreso",
     class: "bg-[#27ae60] text-white",
   },
 };
 const PROJECTS = [
   {
     title:
-      "IAnime - Sitio web que de recomendación de animes en base a tus gustos, y enriquecido con IA.",
+      "IAnime - Sitio web de recomendaciones de series anime en base a tus gustos, y enriquecido con inteligencia artificial.",
     description:
-      "Sitio web impulsado con IA que admite hasta 5 elecciones de tus animes favoritos, los cuales usará como referencia para brindarte las mejores recomendaciones de nuevas series. Creado desde cero con Next.js, React y Tailwind CSS.",
+      "Sitio web impulsado con I  A que admite hasta 5 elecciones de tus animes favoritos, los cuales usará como referencia para brindarte las mejores recomendaciones de nuevas series. Creado desde cero con Next.js, React y Tailwind CSS.",
     link: "https://datalab-oso5.vercel.app/",
     github: "https://github.com/Ezem98/datalab",
     image: "/projects/ianime.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.IN_PROGRESS],
+    tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.IN_PROGRESS],
   },
   {
     title:
       "Datalab - Excelente herramienta para el scouting de jugadores en Argentina.",
     description:
-      "Aplicación web que permite buscar jugadores; compararlos hasta contra otros 5; hacer nuevos descubrimientos en el mercado; personalizar la base de datos que se utiliza; y muchas más utilidades. Creado desde cero con Next.js, React y Tailwind CSS.",
+      "Aplicación web que permite buscar jugadores; permite la comparación de jugadores, aceptando un máximo de 5 por vez; hacer nuevos descubrimientos en el mercado; personalizar la base de datos que se utiliza; y muchas más utilidades.",
     link: "https://datalab-oso5.vercel.app/",
     github: "https://github.com/Ezem98/datalab",
     image: "/projects/datalab.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.DEPRECATED],
+    tags: [TAGS.NEXT, TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.DEPRECATED],
+  },
+  {
+    title: "AintFungi - Una moda salida del futuro.",
+    description:
+      "Aplicación web para un ecommerce de indumentaria o marca de ropa que nació de la idea de la unicidad y distinción de cada persona.",
+    link: "https://aintfungi-frontend.vercel.app/",
+    github: "https://github.com/Ezem98/aintfungi-frontend",
+    image: "/projects/aintfungi.webp",
+    tags: [
+      TAGS.REACT,
+      TAGS.JAVASCRIPT,
+      TAGS.STYLED_COMPONENTS,
+      TAGS.DEPRECATED,
+    ],
   },
   {
     title: "EDM - Elevaplus Data Management. ",
     description:
-      "Aplicación de uso diario y constante, para el manejo de diversos aspectos de una empresa dedicada al transporte. Desde la carga de servicios, el manejo de empleados, clientes, hasta gráficos que ayudan a visualizar el rendimiento diario, mensual y anual, asi como también comparar entre distintos periodos de tiempo. Creado desde cero con Next.js, React y Tailwind CSS.",
+      "Aplicación de uso diario y constante, para el manejo de diversos aspectos de una empresa dedicada al transporte. Desde la carga de servicios, el manejo de empleados, clientes, hasta gráficos que ayudan a visualizar el rendimiento diario, mensual y anual, asi como también comparar entre distintos periodos de tiempo.",
     // link: "https://adventjs.dev",
     github: "https://github.com/Ezem98/elevaplus-data",
     image: "/projects/elevaplus.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.DEPRECATED],
+    tags: [TAGS.NEXT, TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.DEPRECATED],
   },
 ];
 ---
